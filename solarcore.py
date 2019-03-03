@@ -170,8 +170,7 @@ class SolarCore:
         r[0], P[0], L[0], T[0], rho[0], epsilon[0], m[0] = self.R0, self.P0, self.L0, self.T0, self.rho0, self.energy_production(self.T0, self.rho0), self.M0
         #print(r[0], P[0], L[0], T[0], rho[0], epsilon[0], m[0])
         for i in range(n-1):
-            sys.stdout.write(str("%.2f\r" % (i/n) * 100))
-            sys.stdout.flush()
+
             if m[i] < 0 or r[i] < 0 or L[i] < 0 or rho[i] < 0 or P[i] < 0 or T[i] < 0:
                 print("Error, value below zero.")
                 print("Step:", i)
